@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "starter": {
+    "angular-starter": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -36,7 +36,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/starter",
+            "baseHref": "/angular-starter/",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -81,18 +82,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "starter:build"
+            "browserTarget": "angular-starter:build",
+            "disableHostCheck": true
           },
           "configurations": {
             "production": {
-              "browserTarget": "starter:build:production"
+              "browserTarget": "angular-starter:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "starter:build"
+            "browserTarget": "angular-starter:build"
           }
         },
         "test": {
@@ -127,5 +129,5 @@
       }
     }
   },
-  "defaultProject": "starter"
+  "defaultProject": "angular-starter"
 }
