@@ -19,7 +19,7 @@ export class AppComponent  implements OnInit {
   }
 
   ngOnInit() {
-    this.restService.doGet('/users').subscribe((res) => {
+    this.restService.doGet('users/').subscribe((res) => {
       console.log('res', res);
     });
 
