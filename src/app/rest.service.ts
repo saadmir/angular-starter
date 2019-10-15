@@ -5,7 +5,7 @@ import * as _ from 'lodash';
 import { map, flatMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-const BASE_URL = 'http://code.saadmir.com/api';
+const BASE_URL = '//code.saadmir.com/api';
 
 @Injectable({
   providedIn: 'root'
